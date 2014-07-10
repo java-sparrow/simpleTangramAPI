@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tangram 1.5.2.2 本地简易API</title>
+    
+    <link rel="stylesheet" href="dep/rf-css/0.2.1/dist/rf.css" />
+    
+    <script src="dep/esl/1.6.0/dist/esl.js"></script>
+    <script src="dep/tangram/1.5.2/dist/tangram.js"></script>
+    
+    <script src="js/tangram_base_api.js" type="text/javascript" charset="utf-8"></script>
+    
+    <style>
+        .layout-common-header {
+            background: rgb(64, 84, 108);
+        }
+        .layout-common-main {
+            left: 211px;
+        }
+        .layout-common-main-expend {
+            left: 20px;
+        }
+        
+        .shrink-icon {
+            z-index: 10;
+        }
+        
+        .logo-text {
+            color: white;
+            padding-left: 20px;
+        }
+        
+        .api-param-table th,
+        .api-param-table td {
+            padding: 3px;
+            border: 1px solid gray;
+            vertical-align: middle;
+        }
+        .api-param-table td {
+            background: #f8f8f8;
+        }
+        .api-param-table th {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout-common-header">
+        <h1 class="logo-text">Hello Tangram !</h1>
+    </div>
+    
+    <!-- 侧边栏 -->
+    <div class="layout-common-sidebar">
+        <div id="leftNavi" style="-webkit-user-select: none; -moz-user-select: none;">
+            <!-- 收缩侧边栏 控制图标 -->
+            <div class="shrink-icon">
+                <div class="node-icon"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="expendBar" class="nav-bar-opened">
+        <span class="expand-icon"></span>
+    </div>
+    
+    <div class="layout-common-main">
+        <div id="apiContent">
+            <h1 style="padding: 20px;">帮助：双击左侧分类可以打开子菜单</h1>
+        </div>
+        
+        <div class="footer">
+            © 2014 x_l_st
+        </div>
+    </div>
+<script>
+    
+    require(['js/index'], function (main) {
+        // 模块入口
+        main.enter();
+    });
+</script>
+</body>
+</html>

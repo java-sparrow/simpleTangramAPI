@@ -1,0 +1,23 @@
+{
+  "name": "rf-css",
+  "version": "0.2.1",
+  "description": "Rigel CSS Framework",
+  "contributors": [
+    {
+      "name": "treelite",
+      "email": "c.xinle@gmail.com"
+    },
+    {
+      "name": "coocon",
+      "email": "coocon2007@gmail.com"
+    }
+  ],
+  "main": "dist/rf.css",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-less": "~0.6.4",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-zip": "~0.9.2"
+  }
+}

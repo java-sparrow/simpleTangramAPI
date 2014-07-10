@@ -1,0 +1,920 @@
+/**
+ * @file Rigel CSS Framework
+ * @auth treelite(c.xinle@gmail.com)
+ */
+/**
+ * @file 常量定义
+ * @auth treelite(c.xinle@gmail.com)
+ */
+/*
+@green: #46A546;
+@red: #F00;
+
+*/
+/**
+ * @file 通用函数
+ * @auth treelite(c.xinle@gmail.com)
+ */
+/* normalize.css 认为*/
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+}
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+
+  font-size: 100%;
+  /* 2 */
+
+  margin: 0;
+  /* 3 */
+
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+
+  cursor: pointer;
+  /* 3 */
+
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+
+  padding: 0;
+  /* 2 */
+
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+
+  vertical-align: top;
+  /* 2 */
+
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/**
+ * @file 基本标签定义
+ * @auth treelite(c.xinle@gmail.com)
+ */
+body {
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: Tahoma, verdana, arial;
+}
+/*bold something*/
+.lead {
+  margin-bottom: 1.5;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 2.25;
+}
+.strong,
+.bold {
+  font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 15.600000000000001px;
+}
+h3 {
+  font-size: 13.200000000000001px;
+}
+/**
+ * @file 布局相关
+ * @author treelite(c.xinle@gmail.com)
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.display-inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.box-1 {
+  background: #E1EEF7;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px;
+}
+.footer {
+  padding: 10px 0;
+  text-align: center;
+  color: #CCC;
+}
+.footer a {
+  color: #CCC;
+}
+/*top条，左侧定宽，右侧自适应的常用布局*/
+/*故意设置了背景颜色 需要自己重载掉*/
+.layout-common-header {
+  top: 0;
+  height: 50px;
+  position: relative;
+  z-index: 1;
+  min-width: 1265px;
+  overflow: hidden;
+  background: #ccc;
+}
+.layout-common-header .logo {
+  background: url("img/banner_logo.gif") no-repeat;
+  float: left;
+  height: 50px;
+  width: 310px;
+}
+/*右侧的文本和内容*/
+.layout-common-header .header-opt {
+  color: #FFF;
+  text-align: right;
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  height: 50px;
+  z-index: 1;
+}
+.layout-common-header .header-block {
+  float: left;
+  margin-top: 20px;
+  margin-right: 10px;
+  z-index: 65536;
+  height: 29px;
+  position: relative;
+  line-height: 29px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+/*下拉menu 用来切换岗位*/
+.layout-common-header .drop-down-menu {
+  float: left;
+  margin-top: 20px;
+  margin-right: 0;
+  z-index: 65536;
+  height: 29px;
+  position: relative;
+  line-height: 29px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.layout-common-header .drop-down-menu-list {
+  background-color: #FFF;
+  position: absolute;
+  color: #455973;
+  right: -1px;
+  top: 29px;
+  border: 1px solid #A8ADB6;
+  border-right: 1px solid #A8ADB6;
+}
+.layout-common-header .drop-down-menu-item {
+  text-align: right;
+  position: relative;
+  background: #FFF;
+  padding-left: 7px;
+  padding-right: 7px;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: #455973;
+  white-space: nowrap;
+}
+.layout-common-sidebar {
+  background: #EFF2F8;
+  width: 210px;
+  z-index: 1;
+  position: absolute;
+  border-right: solid 1px #CCC;
+  border-bottom: solid 1px #CCC;
+  z-index: 0;
+  bottom: 0;
+  top: 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.layout-common-main {
+  min-width: 1050px;
+  position: absolute;
+  top: 50px;
+  left: 215px;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+}
+.nav-bar-closed,
+.nav-bar-opened {
+  position: absolute;
+  background-color: #EFF2F9;
+  top: 50px;
+  left: 0;
+  width: 19px;
+  bottom: 0;
+  border-right: solid 1px #C4CCDF;
+  cursor: pointer;
+}
+.nav-bar-closed {
+  display: block;
+}
+.nav-bar-opened {
+  display: none;
+}
+/*arrow的合并*/
+.nav-bar-closed .expand-icon,
+.nav-bar-opened .expand-icon {
+  margin-top: 15px;
+  margin-left: 3px;
+  display: block;
+  width: 12px;
+  height: 11px;
+}
+.layout-common-sidebar .shrink-icon {
+  border: solid 1px transparent;
+  height: 23px;
+  width: 27px;
+  position: absolute;
+  right: 6px;
+  top: 8px;
+}
+.layout-common-sidebar .shrink-icon:hover {
+  border: solid 1px #ddd;
+  background-color: #fefefe;
+  border-radius: 3px;
+}
+.layout-common-sidebar .shrink-icon:active {
+  border: solid 1px #999;
+  background-color: #eeeeee;
+}
+.layout-common-sidebar .shrink-icon .node-icon {
+  width: 12px;
+  height: 11px;
+  background-position: 0 -44px;
+  top: 6px;
+  left: 6px;
+}
+.layout-common-sidebar .node-home {
+  height: 41px;
+  background-color: #eaeaea;
+  color: #000;
+  border-bottom: solid 1px #ccc;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  line-height: 41px;
+  cursor: pointer;
+  position: relative;
+}
+.layout-common-sidebar .common-node {
+  font-style: normal;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+  *zoom: 1;
+}
+.layout-common-sidebar .node-1 {
+  height: 41px;
+  background-color: #eff2f8;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 41px;
+  border-bottom: solid 1px #ccc;
+  padding-left: 28px;
+}
+.layout-common-sidebar .node-2 {
+  height: 32px;
+  background-color: #faf9f9;
+  color: #000;
+  line-height: 32px;
+  display: block;
+  font-size: 12px;
+  padding-left: 38px;
+  border-bottom: 0;
+}
+.layout-common-sidebar .node-3 {
+  height: 32px;
+  background-color: #faf9f9;
+  color: #000;
+  text-align: left;
+  line-height: 32px;
+  display: block;
+  font-size: 12px;
+  padding-left: 51px;
+  border-bottom: 0;
+}
+.layout-common-sidebar .node-1-text,
+.node-2-text,
+.node-2-text {
+  font-family: "microsoft yahei";
+}
+.layout-common-sidebar .node-1-nowat {
+  background-color: #cdd6ec;
+}
+.layout-common-sidebar .node-2-nowat {
+  font-weight: bold;
+}
+.layout-common-sidebar .node-3-nowat {
+  background-color: #687a91;
+  color: #fff;
+}
+.layout-common-sidebar .node-2-con {
+  border-bottom: solid 1px #ccc;
+}
+.layout-common-sidebar .node-icon {
+  width: 9px;
+  height: 9px;
+  display: block;
+  position: absolute;
+  top: 15px;
+}
+.layout-common-sidebar .node-1.node-closed > .node-icon {
+  background-position: 0 -9px;
+  left: 9px;
+}
+.layout-common-sidebar .node-1.node-open > .node-icon {
+  background-position: 0 -18px;
+  left: 9px;
+}
+.layout-common-sidebar .node-2.node-closed > .node-icon {
+  background-position: 0 -27px;
+  top: 10px;
+  left: 20px;
+}
+.layout-common-sidebar .node-2.node-opened > .node-icon {
+  background-position: 0 -36px;
+  top: 10px;
+  left: 20px;
+}
+/*对于ifram提取*/
+.layout-common-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  min-width: 1030px;
+}
+/**
+ * @file 表单相关
+ * @author treelite(c.xinle@gmail.com)
+ */
+.form .groups {
+  margin-bottom: 10px;
+}
+.form .group {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*group的label应该是需要基本70 然后开发另外两种大小*/
+.form .group .label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 70px;
+}
+.form .group .label-2 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 90px;
+}
+.form .group .label-3 {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  width: 110px;
+}
+.form .group .control {
+  width: 200px;
+}
+.form .group .control-2 {
+  width: 220px;
+}
+.form .group .control-3 {
+  width: 250px;
+}
+.form .group .ui-input,
+.form .group .ui-textarea {
+  width: 220px;
+}
+.form .group .ui-select {
+  width: 140px;
+}
+/*共用的notify样式*/
+.ui-rf-notify {
+  background: #F9EDBE;
+  border: solid 1px #F0C36D;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  padding: 2px 0;
+  margin-left: -75px;
+  left: 50%;
+  border-radius: 2px;
+  z-index: 20000000;
+  position: absolute;
+  padding-left: 15px;
+}
+/*notify的loading图标*/
+.ui-rf-notify .icon-loading {
+  background: url('img/loading.gif') no-repeat;
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  vertical-align: -4px;
+  _display: inline;
+  _zoom: 1;
+}
+/*layoutc的 common布局中 左侧的展开图标 , 右侧菜单的图标，node图标*/
+.nav-bar-closed .expand-icon,
+.nav-bar-opened .expand-icon {
+  background-image: url(img/arrow_icons.png);
+  background-position: 0 -54px;
+}
+.layout-common-header .drop-down-menu {
+  background: url(img/arrow_icons.png) right -109px no-repeat;
+}
+.layout-common-sidebar .node-icon {
+  background-image: url(img/arrow_icons.png);
+}
+/**
+ * @file 布局相关
+ * @author treelite(c.xinle@gmail.com)
+ */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-red {
+  color: #9d261d;
+}
+.text-red {
+  color: #9d261d;
+}
+.text-green {
+  color: #46a546;
+}
+/**
+ * @file 常用的一些class
+ * @author coocon(coocon2007@gmail.com)
+ */
+.muted {
+  color: #999999;
+}
+a.muted:hover,
+a.muted:focus {
+  color: #808080;
+}
+.text-warning {
+  color: #c09853;
+}
+a.text-warning:hover,
+a.text-warning:focus {
+  color: #a47e3c;
+}
+.text-error {
+  color: #b94a48;
+}
+a.text-error:hover,
+a.text-error:focus {
+  color: #953b39;
+}
+.text-info {
+  color: #3a87ad;
+}
+a.text-info:hover,
+a.text-info:focus {
+  color: #2d6987;
+}
+.text-success {
+  color: #468847;
+}
+a.text-success:hover,
+a.text-success:focus {
+  color: #356635;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+/*关于间距*/
+.padding-10 {
+  padding: 10px;
+}
+.padding-right-5 {
+  padding-right: 5px;
+}
+.padding-right-10 {
+  padding-right: 10px;
+}
+.padding-right-20 {
+  padding-right: 20px;
+}
+.padding-right-50 {
+  padding-right: 50px;
+}
+.padding-left-5 {
+  padding-left: 5px;
+}
+.padding-left-10 {
+  padding-left: 10px;
+}
+.padding-left-20 {
+  padding-left: 20px;
+}
+.padding-left-50 {
+  padding-right: 50px;
+}
+/*margin values*/
+.margin-10 {
+  margin: 10px;
+}
+.margin-right-5 {
+  margin-right: 5px;
+}
+.margin-right-10 {
+  margin-right: 10px;
+}
+.margin-right-20 {
+  margin-right: 20px;
+}
+.margin-right-50 {
+  margin-right: 50px;
+}
+.margin-left-5 {
+  margin-left: 5px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-left-20 {
+  margin-left: 20px;
+}
+.margin-left-50 {
+  margin-right: 50px;
+}
