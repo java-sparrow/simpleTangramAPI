@@ -21,14 +21,27 @@
         .layout-common-main-expend {
             left: 20px;
         }
+        .layout-common-sidebar .node-2-nowat,
+        .node-2:hover {
+            background-color: #B2BCCA;
+            color: #fff;
+        }
         
         .shrink-icon {
             z-index: 10;
         }
         
         .logo-text {
-            color: white;
+            float: left;
             padding-left: 20px;
+            color: white;
+        }
+        .header-link {
+            text-decoration: none;
+            color: white;
+        }
+        .header-link:hover {
+            color: #4183C4;
         }
         
         .api-param-table th,
@@ -48,6 +61,15 @@
 <body>
     <div class="layout-common-header">
         <h1 class="logo-text">Hello Tangram !</h1>
+        <div class="header-opt">
+            <div class="header-block">
+                <a class="header-link" href="https://github.com/java-sparrow/simpleTangramAPI/archive/master.zip">下载zip文件</a>
+            </div>
+            <div class="header-block">&nbsp;|&nbsp;</div>
+            <div class="header-block">
+                <a class="header-link" href="https://github.com/java-sparrow/simpleTangramAPI">Fork me on GitHub</a>
+            </div>
+        </div>
     </div>
     
     <!-- 侧边栏 -->
