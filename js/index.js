@@ -17,7 +17,8 @@ define(function (require) {
     function initView() {
         view = {
             leftNavi: T.dom.g('leftNavi'),
-            apiContent: T.dom.g('apiContent')
+            apiContent: T.dom.g('apiContent'),
+            userHelp: T.dom.g('userHelp')
         };
         
         function createParentNode(text) {
@@ -106,7 +107,17 @@ define(function (require) {
      * 页面事件绑定
      */
     function bindEvents() {
-        
+        //  使用帮助
+        view.userHelp.onclick = (function () {
+            //  懒得切换【帮助信息】的 显示/隐藏 了，这里直接使用 匿名立即执行函数 来缓存【帮助信息】文本
+            var helpTips = view.apiContent.innerHTML;
+            
+            return function () {
+                view.apiContent.innerHTML = helpTips;
+                
+                return false;
+            };
+        })();
     }
     
     function getDocHTML(docContentData) {
